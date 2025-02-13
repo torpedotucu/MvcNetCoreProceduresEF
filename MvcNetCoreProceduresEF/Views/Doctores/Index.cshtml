@@ -1,0 +1,15 @@
+﻿@model List<Doctor>
+@{
+    List<string> especialidades = ViewData["ESPECIALIDADES"] as List<string>;
+}
+<h1>DOCTORES ESPECIALIDADES</h1>
+<form method="post">
+    <select name="especialidad" class="form-control">
+        @foreach(string espec in especialidades){
+            <option value="@espec">@espec</option>
+        }
+    </select>
+    <label>Incremento:</label>
+    <input type="number" name="incremento" />
+    <button>Incrementar</button>
+</form>
