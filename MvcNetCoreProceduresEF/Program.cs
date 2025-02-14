@@ -9,10 +9,11 @@ builder.Services.AddControllersWithViews();
 
 string connectionString = builder.Configuration.GetConnectionString("SqlHospital");
 builder.Services.AddTransient<RepositoryEnfermos>();
+builder.Services.AddTransient<RepositoryEmpleados>();
 builder.Services.AddDbContext<EnfermosContext>(options => options.UseSqlServer(connectionString));
 builder.Services.AddTransient<RepositoryDoctores>();
 builder.Services.AddDbContext<DoctoresContext>(options => options.UseSqlServer(connectionString));
-
+builder.Services.AddDbContext<HospitalContext>(options => options.UseSqlServer(connectionString));
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
