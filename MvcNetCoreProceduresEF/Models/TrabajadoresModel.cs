@@ -1,6 +1,6 @@
 ﻿namespace MvcNetCoreProceduresEF.Models
 {
-    public class TrabajadorModel
+    public class TrabajadoresModel
     {
         public List<Trabajador> Trabajadores { get; set; }
         public int Personas { get; set; }

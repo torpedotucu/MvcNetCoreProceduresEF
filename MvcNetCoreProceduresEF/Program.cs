@@ -14,6 +14,7 @@ builder.Services.AddDbContext<EnfermosContext>(options => options.UseSqlServer(c
 builder.Services.AddTransient<RepositoryDoctores>();
 builder.Services.AddDbContext<DoctoresContext>(options => options.UseSqlServer(connectionString));
 builder.Services.AddDbContext<HospitalContext>(options => options.UseSqlServer(connectionString));
+builder.Services.AddTransient<RepositoryTrabajadores>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
